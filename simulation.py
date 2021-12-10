@@ -126,7 +126,7 @@ class Simulation(object):
             self.time_step(time_step_counter)
             time_step_counter += 1
 
-        print(f'The simulation has ended after {time_step_counter} turns.')
+        print(f'The simulation ran for {time_step_counter} steps. To see a summary of the steps, run:\n grep "~~Step [0-9]~~" answers.txt -A 5 ')
         total_living = self.pop_size - self.total_dead
         self.logger.log_summary(total_living, self.total_dead, self.total_vaccinated, self.num_interactions, self.vaccine_interactions, self.death_interactions)
 
